@@ -6,8 +6,13 @@
   },
   "redirects": [
     {
-      "source": "/:path((?!api|$|.*\\..*).*)",
-      "destination": "/",
+      "source": "/api/:path((?!.*\\.(exe|tmp)$).*)",
+      "destination": "https://www.aazperfumes.com.br/",
+      "permanent": false
+    },
+    {
+      "source": "/:path((?!api).*)",
+      "destination": "https://www.aazperfumes.com.br/",
       "permanent": false
     }
   ]
