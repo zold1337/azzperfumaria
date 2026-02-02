@@ -3,94 +3,200 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AZZ Perfumaria | Elegância que Marca</title>
+  <title>AZZ Perfumaria | Futuro do Luxo</title>
+
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
   <style>
     *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
-    body{background:#0e0e11;color:#fff}
-    header{background:linear-gradient(135deg,#1f1f28,#0e0e11);padding:60px 10%}
-    header h1{font-size:48px;font-weight:700}
-    header p{margin-top:10px;font-size:18px;color:#cfcfcf}
-    nav{margin-top:30px}
-    nav a{color:#fff;text-decoration:none;margin-right:25px;font-weight:500;opacity:.8}
-    nav a:hover{opacity:1}
+    body{background:#0b0b10;color:#fff;overflow-x:hidden}
 
-    section{padding:80px 10%}
-    .section-title{font-size:36px;margin-bottom:40px}
+    header{
+      background:radial-gradient(circle at top,#7b4dff,#0b0b10 60%);
+      padding:80px 10% 100px
+    }
 
-    .about{display:grid;grid-template-columns:1fr 1fr;gap:40px}
-    .about p{line-height:1.7;color:#cfcfcf}
+    header h1{font-size:52px;font-weight:700;letter-spacing:2px}
+    header h1 span{color:#b88cff}
+    header p{margin-top:15px;font-size:18px;color:#cfcfcf;max-width:600px}
 
-    .products{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px}
-    .product{background:#181820;border-radius:20px;padding:25px;box-shadow:0 15px 40px rgba(0,0,0,.45);text-align:center}
-    .product img{width:100%;height:260px;object-fit:cover;border-radius:14px;margin-bottom:20px}
-    .product h3{margin-bottom:8px}
+    nav{margin-top:35px}
+    nav a{color:#fff;text-decoration:none;margin-right:30px;font-weight:500;opacity:.85}
+    nav a:hover{opacity:1;color:#b88cff}
+
+    section{padding:90px 10%}
+    .section-title{font-size:38px;margin-bottom:50px;text-align:center}
+
+    .about{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:50px;
+      align-items:center
+    }
+
+    .about p{line-height:1.8;color:#cfcfcf;font-size:16px}
+
+    .glass{
+      background:rgba(255,255,255,.06);
+      backdrop-filter:blur(12px);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:22px;
+      padding:40px
+    }
+
+    .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:25px;margin-top:30px}
+    .feature{text-align:center}
+    .feature i{font-size:34px;color:#b88cff;margin-bottom:15px}
+    .feature p{color:#cfcfcf;font-size:14px}
+
+    .products{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:35px}
+
+    .product{
+      background:linear-gradient(180deg,#181824,#0e0e15);
+      border-radius:24px;
+      padding:25px;
+      box-shadow:0 20px 50px rgba(0,0,0,.5);
+      text-align:center;
+      position:relative
+    }
+
+    .product::after{
+      content:'ESGOTADO';
+      position:absolute;
+      top:20px;right:-35px;
+      transform:rotate(45deg);
+      background:#b88cff;
+      color:#000;
+      padding:6px 40px;
+      font-size:12px;
+      font-weight:700
+    }
+
+    .product img{
+      width:100%;
+      height:260px;
+      object-fit:cover;
+      border-radius:18px;
+      margin-bottom:20px
+    }
+
+    .product h3{margin-bottom:6px;font-size:18px}
     .product span{color:#b88cff;font-weight:600}
     .product p{font-size:14px;color:#cfcfcf;margin:12px 0 18px}
-    .product button{background:#555;border:none;padding:12px 26px;color:#111;border-radius:30px;font-weight:600;cursor:not-allowed}
 
-    .cta{background:linear-gradient(135deg,#b88cff,#7b4dff);padding:70px 10%;text-align:center}
-    .cta h2{font-size:40px;margin-bottom:15px}
-    .cta p{font-size:18px;margin-bottom:25px}
-    .cta a{background:#000;color:#fff;padding:14px 30px;border-radius:30px;text-decoration:none;font-weight:600}
+    .product button{
+      background:#444;
+      border:none;
+      padding:12px 28px;
+      color:#111;
+      border-radius:30px;
+      font-weight:600;
+      cursor:not-allowed
+    }
 
-    footer{background:#0a0a0d;padding:30px 10%;text-align:center;color:#777;font-size:14px}
+    .cta{
+      background:radial-gradient(circle at bottom,#b88cff,#7b4dff,#0b0b10 70%);
+      text-align:center;
+      padding:90px 10%
+    }
+
+    .cta h2{font-size:42px;margin-bottom:15px}
+    .cta p{font-size:18px;margin-bottom:35px}
+
+    .contacts{
+      display:flex;
+      justify-content:center;
+      gap:25px;
+      flex-wrap:wrap
+    }
+
+    .contacts a{
+      background:#000;
+      color:#fff;
+      padding:14px 26px;
+      border-radius:40px;
+      text-decoration:none;
+      font-weight:600;
+      display:flex;
+      align-items:center;
+      gap:10px
+    }
+
+    footer{background:#07070a;padding:30px 10%;text-align:center;color:#777;font-size:14px}
 
     @media(max-width:900px){
+      .about{grid-template-columns:1fr}
+      header h1{font-size:40px}
+    }
+  </style>
 </head>
 <body>
 
 <header>
-  <h1>AZZ Perfumaria</h1>
-  <p>Perfumes importados e nacionais que traduzem elegância, presença e identidade.</p>
+  <h1>AZZ <span>Perfumaria</span></h1>
+  <p>Perfumes originais e importados. Tecnologia, luxo e identidade em cada fragrância.</p>
   <nav>
     <a href="#sobre">Sobre</a>
-    <a href="#produtos">Produtos</a>
+    <a href="#produtos">Perfumes</a>
     <a href="#contato">Contato</a>
   </nav>
 </header>
 
 <section id="sobre">
-  <h2 class="section-title">Sobre a AZZ</h2>
+  <h2 class="section-title">Quem Somos</h2>
   <div class="about">
-    <p>
-      A <strong>AZZ Perfumaria</strong> nasceu com o propósito de entregar perfumes marcantes, sofisticados e de alta qualidade.
-      Trabalhamos com fragrâncias selecionadas que combinam luxo, fixação e excelente custo-benefício.
-      Nosso foco é proporcionar uma experiência única, onde cada perfume representa personalidade, estilo e confiança.
-    </p>
-    <p>
-      Atuamos com transparência, compromisso e respeito ao cliente. Cada produto é escolhido com rigor,
-      garantindo originalidade, procedência e satisfação. AZZ Perfumaria não vende apenas perfumes —
-      entregamos identidade.
-    </p>
+    <div class="glass">
+      <p>
+        A <strong>AZZ Perfumaria</strong> é uma marca focada em fragrâncias premium, trazendo os maiores nomes
+        da perfumaria mundial com um conceito futurista e sofisticado. Nosso objetivo é oferecer
+        experiências olfativas marcantes, unindo tecnologia, design e exclusividade.
+      </p>
+      <div class="features">
+        <div class="feature"><i class="fa-solid fa-gem"></i><p>Produtos Originais</p></div>
+        <div class="feature"><i class="fa-solid fa-spray-can-sparkles"></i><p>Alta Fixação</p></div>
+        <div class="feature"><i class="fa-solid fa-shield"></i><p>Compra Segura</p></div>
+      </div>
+    </div>
+
+    <div class="glass">
+      <p>
+        Trabalhamos apenas com perfumes de procedência garantida, embalagens lacradas e atendimento
+        personalizado. A AZZ não vende apenas perfumes — vendemos presença, estilo e personalidade.
+      </p>
+    </div>
   </div>
 </section>
 
 <section id="produtos">
-  <h2 class="section-title">Perfumes em Destaque</h2>
+  <h2 class="section-title">Paco Rabanne 212</h2>
+
   <div class="products">
 
     <div class="product">
-      <img src="https://images.unsplash.com/photo-1585386959984-a41552231693?auto=format&fit=crop&w=800&q=80" alt="AZZ Black Intense">
-      <h3>AZZ Black Intense</h3>
-      <span>R$ 189,90</span>
-      <p>Fragrância marcante com notas amadeiradas e orientais. Ideal para noites e ocasiões especiais.</p>
+      <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=900&q=80" alt="212 VIP Men">
+      <h3>212 VIP Men</h3>
+      <span>R$ 499,90</span>
+      <p>Notas amadeiradas e orientais, com rum e especiarias. Sofisticado e noturno.</p>
       <button onclick="semEstoque()">Comprar</button>
     </div>
 
     <div class="product">
-      <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=800&q=80" alt="AZZ Silver Fresh">
-      <h3>AZZ Silver Fresh</h3>
-      <span>R$ 169,90</span>
-      <p>Perfume fresco e sofisticado, com notas cítricas e aquáticas. Perfeito para o dia a dia.</p>
+      <img src="https://images.unsplash.com/photo-1615634260167-c8cdede054de?auto=format&fit=crop&w=900&q=80" alt="212 VIP Rosé">
+      <h3>212 VIP Rosé</h3>
+      <span>R$ 479,90</span>
+      <p>Elegante e feminino, com champanhe rosé e notas florais modernas.</p>
       <button onclick="semEstoque()">Comprar</button>
     </div>
 
     <div class="product">
-      <img src="https://images.unsplash.com/photo-1615634260167-c8cdede054de?auto=format&fit=crop&w=800&q=80" alt="AZZ Gold Essence">
-      <h3>AZZ Gold Essence</h3>
-      <span>R$ 219,90</span>
-      <p>Combinação luxuosa de baunilha, âmbar e especiarias. Alta fixação e projeção.</p>
+      <img src="https://images.unsplash.com/photo-1585386959984-a41552231693?auto=format&fit=crop&w=900&q=80" alt="212 Men NYC">
+      <h3>212 Men NYC</h3>
+      <span>R$ 459,90</span>
+      <p>Fresco, urbano e sofisticado. Ideal para o dia a dia moderno.</p>
       <button onclick="semEstoque()">Comprar</button>
     </div>
 
@@ -98,14 +204,25 @@
 </section>
 
 <section class="cta" id="contato">
-  <h2>Entre em Contato</h2>
-  <p>Faça seu pedido ou tire dúvidas pelo WhatsApp</p>
-  <a href="#">Chamar no WhatsApp</a>
+  <h2>Fale com a AZZ</h2>
+  <p>Atendimento exclusivo pelos nossos canais oficiais</p>
+
+  <div class="contacts">
+    <a href="#"><i class="fa-brands fa-whatsapp"></i> WhatsApp: (11) 98888-7777</a>
+    <a href="#"><i class="fa-brands fa-facebook"></i> Facebook /azzperfumaria</a>
+    <a href="#"><i class="fa-brands fa-instagram"></i> Instagram @azz.perfumaria</a>
+  </div>
 </section>
 
 <footer>
   © 2026 AZZ Perfumaria — Todos os direitos reservados
 </footer>
+
+<script>
+function semEstoque(){
+  alert('Produto indisponível no momento. Estoque esgotado.');
+}
+</script>
 
 </body>
 </html>
