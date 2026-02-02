@@ -70,9 +70,9 @@
   <h1>AZZ <span>Perfumaria</span></h1>
   <p>Curadoria de fragrâncias importadas com foco em autenticidade, informação clara e uma experiência de compra segura. Aqui você encontra perfumes reconhecidos mundialmente, apresentados com transparência e cuidado.</p>
   <nav>
-    <a href="#produtos">Produtos</a>
-    <a href="#sobre">Sobre</a>
-    <a href="#contato">Contato</a>
+    <a href="javascript:void(0)" onclick="scrollToSection('produtos')">Produtos</a>
+    <a href="javascript:void(0)" onclick="scrollToSection('sobre')">Sobre</a>
+    <a href="javascript:void(0)" onclick="scrollToSection('contato')">Contato</a>
   </nav>
 </header>
 
@@ -161,6 +161,13 @@
 <script>
 function abrirModal(){document.getElementById('modal').style.display='flex'}
 function fecharModal(){document.getElementById('modal').style.display='none'}
+
+function scrollToSection(id){
+  const el = document.getElementById(id);
+  if(el){
+    el.scrollIntoView({behavior:'smooth'});
+  }
+}
 </script>
 
 </body>
