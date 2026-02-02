@@ -3,145 +3,76 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AZZ Perfumaria | Futuro do Luxo</title>
+  <title>AZZ Perfumaria | Loja Oficial</title>
 
-  <!-- Google Fonts -->
+  <!-- Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <style>
     *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
-    body{background:#0b0b10;color:#fff;overflow-x:hidden}
+    body{background:#0b0b10;color:#fff}
+    a{text-decoration:none;color:inherit}
 
-    header{
-      background:radial-gradient(circle at top,#7b4dff,#0b0b10 60%);
-      padding:80px 10% 100px
-    }
-
+    header{background:radial-gradient(circle at top,#7b4dff,#0b0b10 65%);padding:70px 10%}
     header h1{font-size:52px;font-weight:700;letter-spacing:2px}
     header h1 span{color:#b88cff}
-    header p{margin-top:15px;font-size:18px;color:#cfcfcf;max-width:600px}
-
-    nav{margin-top:35px}
-    nav a{color:#fff;text-decoration:none;margin-right:30px;font-weight:500;opacity:.85}
+    header p{margin-top:12px;color:#cfcfcf;max-width:650px}
+    nav{margin-top:28px}
+    nav a{margin-right:26px;opacity:.85;font-weight:500}
     nav a:hover{opacity:1;color:#b88cff}
 
     section{padding:90px 10%}
-    .section-title{font-size:38px;margin-bottom:50px;text-align:center}
+    .section-title{text-align:center;font-size:38px;margin-bottom:40px}
 
-    .about{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:50px;
-      align-items:center
-    }
+    .glass{background:rgba(255,255,255,.06);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.08);border-radius:22px;padding:36px}
 
-    .about p{line-height:1.8;color:#cfcfcf;font-size:16px}
+    .about{display:grid;grid-template-columns:1.2fr .8fr;gap:40px}
+    .about p{color:#cfcfcf;line-height:1.8}
 
-    .glass{
-      background:rgba(255,255,255,.06);
-      backdrop-filter:blur(12px);
-      border:1px solid rgba(255,255,255,.08);
-      border-radius:22px;
-      padding:40px
-    }
+    .badges{display:flex;gap:20px;margin-top:25px;flex-wrap:wrap}
+    .badge{background:#111;border:1px solid #222;border-radius:16px;padding:14px 18px;display:flex;align-items:center;gap:10px;font-size:14px}
+    .badge i{color:#b88cff}
 
-    .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:25px;margin-top:30px}
-    .feature{text-align:center}
-    .feature i{font-size:34px;color:#b88cff;margin-bottom:15px}
-    .feature p{color:#cfcfcf;font-size:14px}
+    /* PRODUCTS */
+    .tools{display:flex;gap:20px;flex-wrap:wrap;justify-content:center;margin-bottom:35px}
+    .tools input,.tools select{background:#0f0f16;border:1px solid #222;border-radius:30px;padding:12px 18px;color:#fff;min-width:220px}
 
-    .products{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:35px}
-
-    .product{
-      background:linear-gradient(180deg,#181824,#0e0e15);
-      border-radius:24px;
-      padding:25px;
-      box-shadow:0 20px 50px rgba(0,0,0,.5);
-      text-align:center;
-      position:relative
-    }
-
-    .product::after{
-      content:'ESGOTADO';
-      position:absolute;
-      top:20px;right:-35px;
-      transform:rotate(45deg);
-      background:#b88cff;
-      color:#000;
-      padding:6px 40px;
-      font-size:12px;
-      font-weight:700
-    }
-
-    .product img{
-      width:100%;
-      height:260px;
-      object-fit:cover;
-      border-radius:18px;
-      margin-bottom:20px
-    }
-
-    .product h3{margin-bottom:6px;font-size:18px}
+    .products{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px}
+    .product{background:linear-gradient(180deg,#171726,#0f0f17);border-radius:24px;padding:22px;box-shadow:0 20px 50px rgba(0,0,0,.5);text-align:center}
+    .product img{width:100%;height:260px;object-fit:cover;border-radius:18px;margin-bottom:16px}
+    .product h3{font-size:16px;margin-bottom:6px}
     .product span{color:#b88cff;font-weight:600}
-    .product p{font-size:14px;color:#cfcfcf;margin:12px 0 18px}
+    .product p{font-size:13px;color:#cfcfcf;margin:10px 0 16px}
+    .product button{background:#333;border:none;padding:12px 26px;color:#111;border-radius:30px;font-weight:600;cursor:pointer}
 
-    .product button{
-      background:#444;
-      border:none;
-      padding:12px 28px;
-      color:#111;
-      border-radius:30px;
-      font-weight:600;
-      cursor:not-allowed
-    }
+    /* MODAL */
+    .modal{position:fixed;inset:0;background:rgba(0,0,0,.65);display:none;align-items:center;justify-content:center;z-index:10}
+    .modal-box{background:#0f0f17;border:1px solid #222;border-radius:28px;padding:36px;max-width:420px;text-align:center}
+    .modal-box i{font-size:44px;color:#b88cff;margin-bottom:16px}
+    .modal-box h3{margin-bottom:10px}
+    .modal-box p{color:#cfcfcf;margin-bottom:22px}
+    .modal-box button{background:#b88cff;border:none;padding:12px 28px;border-radius:30px;font-weight:700}
 
-    .cta{
-      background:radial-gradient(circle at bottom,#b88cff,#7b4dff,#0b0b10 70%);
-      text-align:center;
-      padding:90px 10%
-    }
+    .cta{background:radial-gradient(circle at bottom,#b88cff,#7b4dff,#0b0b10 70%);text-align:center;padding:90px 10%}
+    .cta h2{font-size:42px;margin-bottom:14px}
+    .cta p{margin-bottom:28px}
+    .contacts{display:flex;gap:22px;justify-content:center;flex-wrap:wrap}
+    .contacts a{background:#000;padding:14px 26px;border-radius:40px;font-weight:600;display:flex;align-items:center;gap:10px}
 
-    .cta h2{font-size:42px;margin-bottom:15px}
-    .cta p{font-size:18px;margin-bottom:35px}
+    footer{background:#07070a;padding:30px 10%;text-align:center;color:#777}
 
-    .contacts{
-      display:flex;
-      justify-content:center;
-      gap:25px;
-      flex-wrap:wrap
-    }
-
-    .contacts a{
-      background:#000;
-      color:#fff;
-      padding:14px 26px;
-      border-radius:40px;
-      text-decoration:none;
-      font-weight:600;
-      display:flex;
-      align-items:center;
-      gap:10px
-    }
-
-    footer{background:#07070a;padding:30px 10%;text-align:center;color:#777;font-size:14px}
-
-    @media(max-width:900px){
-      .about{grid-template-columns:1fr}
-      header h1{font-size:40px}
-    }
+    @media(max-width:900px){header h1{font-size:40px}.about{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
 
 <header>
   <h1>AZZ <span>Perfumaria</span></h1>
-  <p>Perfumes originais e importados. Tecnologia, luxo e identidade em cada fragrância.</p>
+  <p>Perfumes importados originais. Referência nacional em fragrâncias premium, procedência garantida e atendimento exclusivo.</p>
   <nav>
     <a href="#sobre">Sobre</a>
-    <a href="#produtos">Perfumes</a>
+    <a href="#produtos">Produtos</a>
     <a href="#contato">Contato</a>
   </nav>
 </header>
@@ -150,77 +81,89 @@
   <h2 class="section-title">Quem Somos</h2>
   <div class="about">
     <div class="glass">
-      <p>
-        A <strong>AZZ Perfumaria</strong> é uma marca focada em fragrâncias premium, trazendo os maiores nomes
-        da perfumaria mundial com um conceito futurista e sofisticado. Nosso objetivo é oferecer
-        experiências olfativas marcantes, unindo tecnologia, design e exclusividade.
-      </p>
-      <div class="features">
-        <div class="feature"><i class="fa-solid fa-gem"></i><p>Produtos Originais</p></div>
-        <div class="feature"><i class="fa-solid fa-spray-can-sparkles"></i><p>Alta Fixação</p></div>
-        <div class="feature"><i class="fa-solid fa-shield"></i><p>Compra Segura</p></div>
+      <p>A <strong>AZZ Perfumaria</strong> atua no Brasil com foco em perfumes importados e consagrados internacionalmente. Trabalhamos com fornecedores homologados, controle de qualidade rigoroso e experiência premium do início ao fim.</p>
+      <div class="badges">
+        <div class="badge"><i class="fa-solid fa-shield"></i> Compra Segura</div>
+        <div class="badge"><i class="fa-solid fa-certificate"></i> Garantia de Procedência</div>
+        <div class="badge"><i class="fa-solid fa-award"></i> Selo APEC*</div>
+        <div class="badge"><i class="fa-solid fa-truck"></i> Envio Nacional</div>
       </div>
     </div>
-
     <div class="glass">
-      <p>
-        Trabalhamos apenas com perfumes de procedência garantida, embalagens lacradas e atendimento
-        personalizado. A AZZ não vende apenas perfumes — vendemos presença, estilo e personalidade.
-      </p>
+      <p>Somos reconhecidos pelo atendimento humanizado, transparência e compromisso com o cliente. Nossa missão é entregar identidade, presença e confiança através de fragrâncias icônicas.</p>
     </div>
   </div>
 </section>
 
 <section id="produtos">
-  <h2 class="section-title">Paco Rabanne 212</h2>
+  <h2 class="section-title">Produtos</h2>
 
-  <div class="products">
+  <div class="tools">
+    <input id="search" placeholder="Pesquisar perfume..." onkeyup="filtrar()">
+    <select id="price" onchange="filtrar()">
+      <option value="">Filtrar por preço</option>
+      <option value="1">Até R$ 399</option>
+      <option value="2">R$ 400 – R$ 599</option>
+      <option value="3">Acima de R$ 600</option>
+    </select>
+  </div>
 
-    <div class="product">
-      <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=900&q=80" alt="212 VIP Men">
-      <h3>212 VIP Men</h3>
-      <span>R$ 499,90</span>
-      <p>Notas amadeiradas e orientais, com rum e especiarias. Sofisticado e noturno.</p>
-      <button onclick="semEstoque()">Comprar</button>
-    </div>
-
-    <div class="product">
-      <img src="https://images.unsplash.com/photo-1615634260167-c8cdede054de?auto=format&fit=crop&w=900&q=80" alt="212 VIP Rosé">
-      <h3>212 VIP Rosé</h3>
-      <span>R$ 479,90</span>
-      <p>Elegante e feminino, com champanhe rosé e notas florais modernas.</p>
-      <button onclick="semEstoque()">Comprar</button>
-    </div>
-
-    <div class="product">
-      <img src="https://images.unsplash.com/photo-1585386959984-a41552231693?auto=format&fit=crop&w=900&q=80" alt="212 Men NYC">
-      <h3>212 Men NYC</h3>
-      <span>R$ 459,90</span>
-      <p>Fresco, urbano e sofisticado. Ideal para o dia a dia moderno.</p>
-      <button onclick="semEstoque()">Comprar</button>
-    </div>
-
+  <div class="products" id="grid">
+    <!-- 30 produtos -->
+    <script>
+      const perfumes = [
+        ['212 VIP Men',499],['212 VIP Rosé',479],['212 Men NYC',459],['1 Million',599],['1 Million Lucky',629],['Invictus',579],['Invictus Victory',649],['Phantom',689],['Pure XS',559],['Black XS',529],
+        ['Lady Million',589],['Lady Million Empire',619],['Olympea',569],['Olympea Legend',599],['Ultraviolet',499],['XS Pour Elle',489],['1 Million Elixir',699],['Invictus Platinum',679],['Phantom Legion',719],['212 Heroes',519],
+        ['212 Sexy Men',489],['212 Sexy Women',499],['1 Million Privé',659],['Invictus Aqua',639],['Pure XS Night',579],['Black XS L’Excès',599],['Olympea Intense',629],['Lady Million Fabulous',649],['212 VIP Black',529],['Phantom Parfum',739]
+      ];
+      document.write(perfumes.map(p=>`
+        <div class='product' data-name='${p[0].toLowerCase()}' data-price='${p[1]}'>
+          <img src='https://images.unsplash.com/photo-1585386959984-a41552231693?auto=format&fit=crop&w=900&q=80'>
+          <h3>${p[0]}</h3>
+          <span>R$ ${p[1]},90</span>
+          <p>Perfume importado original. Alta fixação e projeção.</p>
+          <button onclick='abrirModal()'>Comprar</button>
+        </div>`).join(''));
+    </script>
   </div>
 </section>
 
 <section class="cta" id="contato">
-  <h2>Fale com a AZZ</h2>
-  <p>Atendimento exclusivo pelos nossos canais oficiais</p>
-
+  <h2>Atendimento Exclusivo</h2>
+  <p>Fale com nossos especialistas e garanta sua experiência AZZ</p>
   <div class="contacts">
-    <a href="#"><i class="fa-brands fa-whatsapp"></i> WhatsApp: (11) 98888-7777</a>
-    <a href="#"><i class="fa-brands fa-facebook"></i> Facebook /azzperfumaria</a>
-    <a href="#"><i class="fa-brands fa-instagram"></i> Instagram @azz.perfumaria</a>
+    <a href="#"><i class="fa-brands fa-whatsapp"></i> WhatsApp (11) 99542‑7812</a>
+    <a href="#"><i class="fa-brands fa-facebook"></i> facebook.com/azzperfumaria</a>
+    <a href="#"><i class="fa-brands fa-instagram"></i> @azz.perfumaria</a>
   </div>
 </section>
 
-<footer>
-  © 2026 AZZ Perfumaria — Todos os direitos reservados
-</footer>
+<footer>© 2026 AZZ Perfumaria — Loja Nacional de Perfumes Importados</footer>
+
+<div class="modal" id="modal">
+  <div class="modal-box">
+    <i class="fa-solid fa-circle-xmark"></i>
+    <h3>Produto indisponível</h3>
+    <p>Este perfume está temporariamente sem estoque. Fale conosco para ser avisado quando retornar.</p>
+    <button onclick="fecharModal()">Entendi</button>
+  </div>
+</div>
 
 <script>
-function semEstoque(){
-  alert('Produto indisponível no momento. Estoque esgotado.');
+function abrirModal(){document.getElementById('modal').style.display='flex'}
+function fecharModal(){document.getElementById('modal').style.display='none'}
+function filtrar(){
+  const s=document.getElementById('search').value.toLowerCase();
+  const p=document.getElementById('price').value;
+  document.querySelectorAll('.product').forEach(el=>{
+    const name=el.dataset.name;
+    const price=parseInt(el.dataset.price);
+    let ok=name.includes(s);
+    if(p=='1') ok&=price<=399;
+    if(p=='2') ok&=price>=400&&price<=599;
+    if(p=='3') ok&=price>=600;
+    el.style.display=ok?'block':'none';
+  })
 }
 </script>
 
