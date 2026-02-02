@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AZZ Perfumaria | Perfumes Importados</title>
 
+  <!-- Favicon -->
+  <link rel="icon" href="https://img.freepik.com/vetores-premium/icone-de-perfume_1134231-23031.jpg?semt=ais_hybrid&w=740&q=80" />
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
@@ -12,12 +15,14 @@
     *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
     body{background:#0f0f14;color:#fff}
 
-    header{padding:80px 10%;border-bottom:1px solid #1f1f2b}
-    header h1{font-size:46px;font-weight:700;letter-spacing:1px}
+    header{padding:70px 10%;border-bottom:1px solid #1f1f2b;display:flex;flex-direction:column;gap:18px}
+    .brand{display:flex;align-items:center;gap:14px}
+    .brand img{width:48px;height:48px;border-radius:12px}
+    header h1{font-size:42px;font-weight:700;letter-spacing:1px}
     header span{color:#8f7cff}
-    header p{margin-top:14px;color:#bdbdc7;max-width:560px}
+    header p{margin-top:6px;color:#bdbdc7;max-width:560px}
 
-    nav{margin-top:26px}
+    nav{margin-top:18px}
     nav a{margin-right:24px;color:#bdbdc7;font-weight:500}
     nav a:hover{color:#fff}
 
@@ -28,7 +33,7 @@
 
     .products{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px}
     .product{background:#151520;border-radius:20px;padding:22px;border:1px solid #20202e;text-align:center}
-    .product img{width:100%;height:260px;object-fit:cover;border-radius:16px;margin-bottom:16px}
+    .product img{width:100%;height:260px;object-fit:contain;background:#0f0f14;border-radius:16px;margin-bottom:16px;padding:10px}
     .product h3{font-size:17px;margin-bottom:6px}
     .product span{color:#8f7cff;font-weight:600}
     .product p{font-size:14px;color:#bdbdc7;margin:12px 0 18px}
@@ -49,13 +54,16 @@
     .modal-box p{color:#cfcfd8;margin-bottom:22px}
     .modal-box button{background:#8f7cff;border:none;padding:12px 28px;border-radius:30px;font-weight:600}
 
-    @media(max-width:900px){header h1{font-size:36px}}
+    @media(max-width:900px){header h1{font-size:34px}}
   </style>
 </head>
 <body>
 
 <header>
-  <h1>AZZ <span>Perfumaria</span></h1>
+  <div class="brand">
+    <img src="https://img.freepik.com/vetores-premium/icone-de-perfume_1134231-23031.jpg?semt=ais_hybrid&w=740&q=80" alt="AZZ Perfumaria">
+    <h1>AZZ <span>Perfumaria</span></h1>
+  </div>
   <p>Perfumes importados selecionados. Minimalismo, elegância e procedência garantida.</p>
   <nav>
     <a href="#sobre">Sobre</a>
@@ -74,34 +82,34 @@
 
   <div class="products">
     <div class="product">
-      <img src="https://images.unsplash.com/photo-1523293836410-f9f5a15e22c8?auto=format&fit=crop&w=800&q=80" alt="212 VIP Men">
+      <img src="https://acdn-us.mitiendanube.com/stores/002/205/904/products/perfume-contratipo-212-vip-men-carolina-herrera-e8c61cf5b53d11cefb17584835189112-1024-1024.webp" alt="212 VIP Men">
       <h3>212 VIP Men</h3>
       <span>R$ 499,90</span>
-      <p>Fragrância sofisticada, ideal para a noite.</p>
+      <p>Fragrância sofisticada e moderna para a noite.</p>
       <button onclick="abrirModal()">Comprar</button>
     </div>
 
     <div class="product">
-      <img src="https://images.unsplash.com/photo-1519666213638-0c50d1d0e80a?auto=format&fit=crop&w=800&q=80" alt="212 VIP Rosé">
+      <img src="https://s3.amazonaws.com/satelital-resources/products/158520_5_7c93ec1e-6b69-485c-a046-70ef3aecc098_Big.jpg" alt="212 VIP Rosé">
       <h3>212 VIP Rosé</h3>
       <span>R$ 479,90</span>
-      <p>Elegante, floral e moderno.</p>
+      <p>Elegante, feminino e marcante.</p>
       <button onclick="abrirModal()">Comprar</button>
     </div>
 
     <div class="product">
-      <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=800&q=80" alt="1 Million">
+      <img src="https://medias.rabanne.com/medias/sys_master/images/h17/h7f/10571550130206/10571550064670/10571550064670.jpg" alt="1 Million">
       <h3>1 Million</h3>
       <span>R$ 589,90</span>
-      <p>Icônico, intenso e marcante.</p>
+      <p>Icônico, intenso e extremamente marcante.</p>
       <button onclick="abrirModal()">Comprar</button>
     </div>
 
     <div class="product">
-      <img src="https://images.unsplash.com/photo-1585386959984-a41552231693?auto=format&fit=crop&w=800&q=80" alt="Invictus">
+      <img src="https://img.lojasrenner.com.br/item/927587134/original/9.jpg" alt="Invictus">
       <h3>Invictus</h3>
       <span>R$ 569,90</span>
-      <p>Fresco, energético e moderno.</p>
+      <p>Fresco, esportivo e poderoso.</p>
       <button onclick="abrirModal()">Comprar</button>
     </div>
   </div>
