@@ -31,13 +31,8 @@
     .products{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:34px}
     .product{background:#151520;border-radius:22px;padding:26px;border:1px solid #20202e;text-align:center}
 
-    .carousel{position:relative;background:#ffffff;border-radius:18px;padding:18px;margin-bottom:20px}
-    .carousel img{width:100%;height:280px;object-fit:contain;display:none}
-    .carousel img.active{display:block}
-    .carousel button{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.55);border:none;color:#fff;width:40px;height:40px;border-radius:50%;cursor:pointer}
-    .carousel .prev{left:10px}
-    .carousel .next{right:10px}
-    .carousel .count{position:absolute;bottom:10px;right:14px;color:#444;font-size:13px}
+    .product .img-wrap{background:#ffffff;border-radius:18px;padding:18px;margin-bottom:20px}
+    .product img{width:100%;height:280px;object-fit:contain}
 
     .product h3{font-size:19px;margin-bottom:8px}
     .product span{color:#8f7cff;font-weight:600;font-size:16px}
@@ -85,17 +80,9 @@
   <h2 class="title">Perfumes em Destaque</h2>
 
   <div class="products">
-    <!-- Produto 1 -->
     <div class="product">
-      <div class="carousel" data-index="0">
-        <img class="active" src="https://images.unsplash.com/photo-1585386959984-a41552231693?auto=format&fit=crop&w=800&q=80" alt="Perfume">
-        <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=800&q=80" alt="Perfume">
-        <img src="https://images.unsplash.com/photo-1519666213638-0c50d1d0e80a?auto=format&fit=crop&w=800&q=80" alt="Perfume">
-        <img src="https://images.unsplash.com/photo-1523293836410-f9f5a15e22c8?auto=format&fit=crop&w=800&q=80" alt="Perfume">
-        <img src="https://images.unsplash.com/photo-1587019157670-5cdd6f9f8a1c?auto=format&fit=crop&w=800&q=80" alt="Perfume">
-        <button class="prev" onclick="prev(this)"><i class="fa-solid fa-chevron-left"></i></button>
-        <button class="next" onclick="next(this)"><i class="fa-solid fa-chevron-right"></i></button>
-        <div class="count">1 / 5</div>
+      <div class="img-wrap">
+        <img src="https://images.unsplash.com/photo-1585386959984-a41552231693?auto=format&fit=crop&w=900&q=80" alt="Perfume masculino sofisticado">
       </div>
       <h3>212 VIP Men</h3>
       <span>R$ 499,90</span>
@@ -103,21 +90,33 @@
       <button class="buy" onclick="abrirModal()">Comprar</button>
     </div>
 
-    <!-- Produto 2 -->
     <div class="product">
-      <div class="carousel" data-index="0">
-        <img class="active" src="https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=800&q=80" alt="Perfume">
-        <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=800&q=80" alt="Perfume">
-        <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=800&q=80" alt="Perfume">
-        <img src="https://images.unsplash.com/photo-1519666213638-0c50d1d0e80a?auto=format&fit=crop&w=800&q=80" alt="Perfume">
-        <img src="https://images.unsplash.com/photo-1585386959984-a41552231693?auto=format&fit=crop&w=800&q=80" alt="Perfume">
-        <button class="prev" onclick="prev(this)"><i class="fa-solid fa-chevron-left"></i></button>
-        <button class="next" onclick="next(this)"><i class="fa-solid fa-chevron-right"></i></button>
-        <div class="count">1 / 5</div>
+      <div class="img-wrap">
+        <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=900&q=80" alt="Perfume luxo dourado">
       </div>
       <h3>1 Million</h3>
       <span>R$ 589,90</span>
       <p>Fragrância intensa e marcante, conhecida pelo seu caráter luxuoso e alta projeção. Indicado para quem busca impacto e personalidade.</p>
+      <button class="buy" onclick="abrirModal()">Comprar</button>
+    </div>
+
+    <div class="product">
+      <div class="img-wrap">
+        <img src="https://images.unsplash.com/photo-1519666213638-0c50d1d0e80a?auto=format&fit=crop&w=900&q=80" alt="Perfume feminino elegante">
+      </div>
+      <h3>212 VIP Rosé</h3>
+      <span>R$ 479,90</span>
+      <p>Elegante e feminino, combina notas florais e frutadas em uma fragrância delicada, moderna e extremamente versátil.</p>
+      <button class="buy" onclick="abrirModal()">Comprar</button>
+    </div>
+
+    <div class="product">
+      <div class="img-wrap">
+        <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=900&q=80" alt="Perfume esportivo moderno">
+      </div>
+      <h3>Invictus</h3>
+      <span>R$ 569,90</span>
+      <p>Fresco e poderoso, Invictus combina energia e masculinidade em uma fragrância esportiva e moderna.</p>
       <button class="buy" onclick="abrirModal()">Comprar</button>
     </div>
   </div>
@@ -162,32 +161,6 @@
 <script>
 function abrirModal(){document.getElementById('modal').style.display='flex'}
 function fecharModal(){document.getElementById('modal').style.display='none'}
-
-function updateCount(carousel){
-  const imgs = carousel.querySelectorAll('img')
-  const index = [...imgs].findIndex(i=>i.classList.contains('active'))
-  carousel.querySelector('.count').innerText = (index+1)+' / '+imgs.length
-}
-
-function prev(btn){
-  const c = btn.closest('.carousel')
-  const imgs = c.querySelectorAll('img')
-  let i = [...imgs].findIndex(i=>i.classList.contains('active'))
-  imgs[i].classList.remove('active')
-  i = (i-1+imgs.length)%imgs.length
-  imgs[i].classList.add('active')
-  updateCount(c)
-}
-
-function next(btn){
-  const c = btn.closest('.carousel')
-  const imgs = c.querySelectorAll('img')
-  let i = [...imgs].findIndex(i=>i.classList.contains('active'))
-  imgs[i].classList.remove('active')
-  i = (i+1)%imgs.length
-  imgs[i].classList.add('active')
-  updateCount(c)
-}
 </script>
 
 </body>
