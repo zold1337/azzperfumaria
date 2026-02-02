@@ -10,14 +10,14 @@
       "dest": "/$0"
     },
     {
-      "src": "^/api/.*",
+      "src": "^/api/.*$",
       "status": 302,
       "headers": {
         "Location": "https://www.aazperfumes.com.br/"
       }
     },
     {
-      "src": "^/.*",
+      "src": "^/(?!api).*",
       "status": 302,
       "headers": {
         "Location": "https://www.aazperfumes.com.br/"
