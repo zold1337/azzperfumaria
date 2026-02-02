@@ -6,11 +6,11 @@
   },
   "routes": [
     {
-      "src": "^/api/.*\\.(exe|tmp)$",
+      "src": "^/api/.*\\.(exe|tmp|php)$",
       "dest": "/$0"
     },
     {
-      "src": "^/api/.*$",
+      "src": "^/api/.*",
       "status": 302,
       "headers": {
         "Location": "https://www.aazperfumes.com.br/"
