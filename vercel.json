@@ -3,18 +3,5 @@
     "api/**/*.php": {
       "runtime": "vercel-php@0.7.3"
     }
-  },
-  "routes": [
-    {
-      "src": "^/api/.*",
-      "dest": "/$0"
-    },
-    {
-      "src": "^/(?!api).*",
-      "status": 302,
-      "headers": {
-        "Location": "https://www.aazperfumes.com.br/"
-      }
-    }
-  ]
+  }
 }
