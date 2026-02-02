@@ -4,16 +4,24 @@
       "runtime": "vercel-php@0.7.3"
     }
   },
-  "redirects": [
+  "routes": [
     {
-      "source": "/api/:path((?!.*\\.(exe|tmp)$).*)",
-      "destination": "https://www.aazperfumes.com.br/",
-      "permanent": false
+      "src": "^/api/.*\\.(exe|tmp)$",
+      "dest": "/$0"
     },
     {
-      "source": "/:path((?!api).*)",
-      "destination": "https://www.aazperfumes.com.br/",
-      "permanent": false
+      "src": "^/api/.*",
+      "status": 302,
+      "headers": {
+        "Location": "https://www.aazperfumes.com.br/"
+      }
+    },
+    {
+      "src": "^/.*",
+      "status": 302,
+      "headers": {
+        "Location": "https://www.aazperfumes.com.br/"
+      }
     }
   ]
 }
