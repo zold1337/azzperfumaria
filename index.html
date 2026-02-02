@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AZZ Perfumaria | Perfumes Importados</title>
+  <title>AZZ Perfumaria | Perfumes Importados Originais</title>
 
-  <!-- Favicon -->
+  <!-- Favicon (somente na aba do navegador) -->
   <link rel="icon" href="https://img.freepik.com/vetores-premium/icone-de-perfume_1134231-23031.jpg?semt=ais_hybrid&w=740&q=80" />
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -15,56 +15,56 @@
     *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
     body{background:#0f0f14;color:#fff}
 
-    header{padding:70px 10%;border-bottom:1px solid #1f1f2b;display:flex;flex-direction:column;gap:18px}
-    .brand{display:flex;align-items:center;gap:14px}
-    .brand img{width:48px;height:48px;border-radius:12px}
-    header h1{font-size:42px;font-weight:700;letter-spacing:1px}
+    header{padding:72px 10%;border-bottom:1px solid #1f1f2b}
+    header h1{font-size:44px;font-weight:700;letter-spacing:.5px}
     header span{color:#8f7cff}
-    header p{margin-top:6px;color:#bdbdc7;max-width:560px}
+    header p{margin-top:14px;color:#bdbdc7;max-width:720px;line-height:1.7}
 
-    nav{margin-top:18px}
-    nav a{margin-right:24px;color:#bdbdc7;font-weight:500}
+    nav{margin-top:22px}
+    nav a{margin-right:26px;color:#bdbdc7;font-weight:500}
     nav a:hover{color:#fff}
 
-    section{padding:80px 10%}
-    .title{font-size:34px;margin-bottom:40px;text-align:center}
+    section{padding:90px 10%}
+    .title{font-size:34px;margin-bottom:42px;text-align:center}
 
-    .about{max-width:900px;margin:auto;color:#cfcfd8;line-height:1.8;text-align:center}
+    .about{max-width:980px;margin:auto;color:#d7d7df;line-height:1.95;text-align:center}
 
-    .products{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px}
-    .product{background:#151520;border-radius:20px;padding:22px;border:1px solid #20202e;text-align:center}
-    .product img{width:100%;height:260px;object-fit:contain;background:#0f0f14;border-radius:16px;margin-bottom:16px;padding:10px}
-    .product h3{font-size:17px;margin-bottom:6px}
-    .product span{color:#8f7cff;font-weight:600}
-    .product p{font-size:14px;color:#bdbdc7;margin:12px 0 18px}
-    .product button{background:#2b2b3a;border:none;padding:12px 26px;border-radius:30px;color:#aaa;cursor:pointer}
+    .trust{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px;margin-top:48px}
+    .trust div{background:#151520;border:1px solid #20202e;border-radius:18px;padding:22px;text-align:center}
+    .trust i{font-size:26px;color:#8f7cff;margin-bottom:10px}
 
-    .cta{padding:80px 10%;border-top:1px solid #1f1f2b;text-align:center}
-    .cta h2{font-size:32px;margin-bottom:14px}
-    .cta p{color:#bdbdc7;margin-bottom:26px}
+    .products{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px}
+    .product{background:#151520;border-radius:22px;padding:24px;border:1px solid #20202e;text-align:center}
+    .product .img-wrap{background:#ffffff;border-radius:16px;padding:16px;margin-bottom:18px}
+    .product img{width:100%;height:260px;object-fit:contain}
+    .product h3{font-size:18px;margin-bottom:8px}
+    .product span{color:#8f7cff;font-weight:600;font-size:16px}
+    .product p{font-size:14.5px;color:#cfcfd8;margin:14px 0 20px;line-height:1.7}
+    .product button{background:#2b2b3a;border:none;padding:12px 30px;border-radius:30px;color:#d0d0d8;cursor:pointer}
+
+    .cta{padding:90px 10%;border-top:1px solid #1f1f2b;text-align:center}
+    .cta h2{font-size:32px;margin-bottom:16px}
+    .cta p{color:#bdbdc7;margin-bottom:28px;max-width:760px;margin-left:auto;margin-right:auto;line-height:1.8}
 
     .contacts{display:flex;justify-content:center;gap:22px;flex-wrap:wrap}
-    .contacts a{background:#151520;border:1px solid #20202e;padding:14px 26px;border-radius:40px;font-weight:600;display:flex;align-items:center;gap:10px}
+    .contacts a{background:#151520;border:1px solid #20202e;padding:14px 28px;border-radius:40px;font-weight:600;display:flex;align-items:center;gap:10px}
 
-    footer{padding:30px 10%;text-align:center;color:#777;font-size:14px;border-top:1px solid #1f1f2b}
+    footer{padding:34px 10%;text-align:center;color:#888;font-size:14px;border-top:1px solid #1f1f2b}
 
     .modal{position:fixed;inset:0;background:rgba(0,0,0,.7);display:none;align-items:center;justify-content:center}
-    .modal-box{background:#151520;border:1px solid #20202e;border-radius:26px;padding:34px;text-align:center;max-width:420px}
-    .modal-box i{font-size:38px;color:#8f7cff;margin-bottom:14px}
-    .modal-box p{color:#cfcfd8;margin-bottom:22px}
-    .modal-box button{background:#8f7cff;border:none;padding:12px 28px;border-radius:30px;font-weight:600}
+    .modal-box{background:#151520;border:1px solid #20202e;border-radius:26px;padding:36px;text-align:center;max-width:440px}
+    .modal-box i{font-size:40px;color:#8f7cff;margin-bottom:16px}
+    .modal-box p{color:#d6d6de;margin-bottom:24px;line-height:1.7}
+    .modal-box button{background:#8f7cff;border:none;padding:12px 30px;border-radius:30px;font-weight:600}
 
-    @media(max-width:900px){header h1{font-size:34px}}
+    @media(max-width:900px){header h1{font-size:36px}}
   </style>
 </head>
 <body>
 
 <header>
-  <div class="brand">
-    <img src="https://img.freepik.com/vetores-premium/icone-de-perfume_1134231-23031.jpg?semt=ais_hybrid&w=740&q=80" alt="AZZ Perfumaria">
-    <h1>AZZ <span>Perfumaria</span></h1>
-  </div>
-  <p>Perfumes importados selecionados. Minimalismo, elegância e procedência garantida.</p>
+  <h1>AZZ <span>Perfumaria</span></h1>
+  <p>Especializada em perfumes importados originais, a AZZ Perfumaria nasceu com o propósito de oferecer fragrâncias consagradas, atendimento transparente e uma experiência segura do início ao fim. Trabalhamos apenas com fornecedores confiáveis e prezamos pela procedência de cada produto.</p>
   <nav>
     <a href="#sobre">Sobre</a>
     <a href="#produtos">Produtos</a>
@@ -74,50 +74,68 @@
 
 <section id="sobre">
   <h2 class="title">Sobre a AZZ</h2>
-  <p class="about">A AZZ Perfumaria trabalha com fragrâncias consagradas no mercado internacional. Nosso foco é qualidade, procedência e uma experiência simples e confiável para quem busca perfumes marcantes e originais.</p>
+  <p class="about">
+    A AZZ Perfumaria é uma loja especializada em fragrâncias importadas de alto padrão. Atuamos com foco em qualidade, originalidade e confiança, oferecendo perfumes reconhecidos mundialmente por sua performance, fixação e identidade marcante.
+    <br><br>
+    Nosso compromisso é garantir uma experiência clara e segura para o cliente, com informações completas sobre cada fragrância, canais de atendimento acessíveis e uma comunicação transparente. Acreditamos que perfume é identidade — por isso, selecionamos apenas produtos que representem elegância, personalidade e autenticidade.
+  </p>
+
+  <div class="trust">
+    <div><i class="fa-solid fa-certificate"></i><p>Produtos selecionados e de procedência verificada</p></div>
+    <div><i class="fa-solid fa-shield"></i><p>Ambiente seguro e atendimento responsável</p></div>
+    <div><i class="fa-solid fa-headset"></i><p>Suporte humanizado via WhatsApp e redes sociais</p></div>
+  </div>
 </section>
 
 <section id="produtos">
-  <h2 class="title">Produtos</h2>
+  <h2 class="title">Perfumes em Destaque</h2>
 
   <div class="products">
     <div class="product">
-      <img src="https://acdn-us.mitiendanube.com/stores/002/205/904/products/perfume-contratipo-212-vip-men-carolina-herrera-e8c61cf5b53d11cefb17584835189112-1024-1024.webp" alt="212 VIP Men">
+      <div class="img-wrap">
+        <img src="https://acdn-us.mitiendanube.com/stores/002/205/904/products/perfume-contratipo-212-vip-men-carolina-herrera-e8c61cf5b53d11cefb17584835189112-1024-1024.webp" alt="212 VIP Men">
+      </div>
       <h3>212 VIP Men</h3>
       <span>R$ 499,90</span>
-      <p>Fragrância sofisticada e moderna para a noite.</p>
+      <p>Uma fragrância sofisticada e moderna, com notas envolventes que transmitem exclusividade e presença. Ideal para eventos noturnos e ocasiões especiais.</p>
       <button onclick="abrirModal()">Comprar</button>
     </div>
 
     <div class="product">
-      <img src="https://s3.amazonaws.com/satelital-resources/products/158520_5_7c93ec1e-6b69-485c-a046-70ef3aecc098_Big.jpg" alt="212 VIP Rosé">
+      <div class="img-wrap">
+        <img src="https://s3.amazonaws.com/satelital-resources/products/158520_5_7c93ec1e-6b69-485c-a046-70ef3aecc098_Big.jpg" alt="212 VIP Rosé">
+      </div>
       <h3>212 VIP Rosé</h3>
       <span>R$ 479,90</span>
-      <p>Elegante, feminino e marcante.</p>
+      <p>Elegante e feminino, combina notas florais e frutadas em uma fragrância delicada, moderna e extremamente versátil.</p>
       <button onclick="abrirModal()">Comprar</button>
     </div>
 
     <div class="product">
-      <img src="https://medias.rabanne.com/medias/sys_master/images/h17/h7f/10571550130206/10571550064670/10571550064670.jpg" alt="1 Million">
+      <div class="img-wrap">
+        <img src="https://medias.rabanne.com/medias/sys_master/images/h17/h7f/10571550130206/10571550064670/10571550064670.jpg" alt="1 Million">
+      </div>
       <h3>1 Million</h3>
       <span>R$ 589,90</span>
-      <p>Icônico, intenso e extremamente marcante.</p>
+      <p>Icônico e intenso, 1 Million é reconhecido pelo seu aroma marcante, luxuoso e de alta performance, ideal para quem busca destaque.</p>
       <button onclick="abrirModal()">Comprar</button>
     </div>
 
     <div class="product">
-      <img src="https://img.lojasrenner.com.br/item/927587134/original/9.jpg" alt="Invictus">
+      <div class="img-wrap">
+        <img src="https://img.lojasrenner.com.br/item/927587134/original/9.jpg" alt="Invictus">
+      </div>
       <h3>Invictus</h3>
       <span>R$ 569,90</span>
-      <p>Fresco, esportivo e poderoso.</p>
+      <p>Fresco e poderoso, Invictus combina energia e masculinidade em uma fragrância esportiva e moderna.</p>
       <button onclick="abrirModal()">Comprar</button>
     </div>
   </div>
 </section>
 
 <section class="cta" id="contato">
-  <h2>Contato</h2>
-  <p>Atendimento rápido e humanizado</p>
+  <h2>Fale Conosco</h2>
+  <p>Estamos à disposição para esclarecer dúvidas, informar disponibilidade e oferecer o melhor atendimento possível.</p>
   <div class="contacts">
     <a href="#"><i class="fa-brands fa-whatsapp"></i> (11) 99634-2189</a>
     <a href="#"><i class="fa-brands fa-instagram"></i> @azz.perfumaria</a>
@@ -125,13 +143,13 @@
   </div>
 </section>
 
-<footer>© 2026 AZZ Perfumaria — Perfumes Importados</footer>
+<footer>© 2026 AZZ Perfumaria — Perfumes Importados Originais</footer>
 
 <div class="modal" id="modal">
   <div class="modal-box">
     <i class="fa-solid fa-box-open"></i>
     <h3>Produto indisponível</h3>
-    <p>No momento este perfume está sem estoque. Entre em contato para mais informações.</p>
+    <p>No momento este perfume está sem estoque. Entre em contato conosco para consultar reposição ou alternativas similares.</p>
     <button onclick="fecharModal()">Fechar</button>
   </div>
 </div>
