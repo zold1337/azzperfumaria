@@ -6,7 +6,7 @@
   },
   "redirects": [
     {
-      "source": "/((?!api).*)",
+      "source": "/:path((?!api|$|.*\\..*).*)",
       "destination": "/",
       "permanent": false
     }
